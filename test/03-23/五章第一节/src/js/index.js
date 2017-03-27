@@ -1,8 +1,32 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+import ComponentHeader from './components/header';
+import ComponentFooter from './components/footer';
+import ComponentBody from './components/indexbody';
 
-ReactDOM.render(
+class ComponentIndex extends React.Component {
 
-	<h1>Hello World 1.2.</h1>,
-	document.getElementById('example')
-);
+	//页面将要加载
+	componentWillMount() {
+		//定义用户逻辑
+		console.log('ComponentIndex - componentWillMount');
+	};
+
+	//页面已经加载完成
+	componentDidMount() {
+		//定义用户逻辑
+		console.log('ComponentIndex - componentDidMount');
+	}
+	render() {
+		var header = <ComponentHeader/>;
+		return (
+			<div>
+				{header}
+				<ComponentBody userid={123456}/>
+				<ComponentFooter/>
+			</div>
+		)
+	}
+}
+
+ReactDOM.render(<ComponentIndex/>,document.getElementById('example'));

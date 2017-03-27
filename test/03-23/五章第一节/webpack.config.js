@@ -14,12 +14,9 @@ module.exports = {
 			}
 		}]
 	},
-	devServer: {
-		inline: true,
-		hot: true
-	},
 	output: {
 		path: __dirname + '/src/',
+	 	publicPath:"/src/",
 		filename: "bandle.js"
 	}
 };
