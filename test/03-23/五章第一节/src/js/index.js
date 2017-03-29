@@ -22,7 +22,7 @@ class ComponentIndex extends React.Component {
 		return (
 			<div>
 				{header}
-				<ComponentBody userid={123456}/>
+				<ComponentBody userid={12345}/>
 				<ComponentFooter/>
 			</div>
 		)

@@ -56,3 +56,8 @@ export default class ComponentBody extends React.Component {
 		);
 	}
 }
+
+//验证传递数据的合法性
+ComponentBody.propTypes = {
+	userid: React.PropTypes.number
+}
